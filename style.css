@@ -20,7 +20,7 @@
   background-color: #222;
   color: #ffffff;
   --primary-text-color: #fff;
-  --secondary-text-color: #f2f2f2;
+  --secondary-text-color: #ccc;
   --body-bg-color: #222;
 }
 
@@ -34,9 +34,11 @@ body {
 h1 {
   font-size: 3em;
 }
+
 h2 {
   font-size: 2.5em;
 }
+
 h3 {
   font-size: 2em;
 }
@@ -158,6 +160,34 @@ ul {
   width: 45px;
   height: 45px;
   cursor: pointer;
+}
+
+/* btn-up */
+.show {
+  opacity: 1;
+  pointer-events: auto;
+  bottom: 30px;
+}
+.scroll-up-btn {
+  position: fixed;
+  height: 50px;
+  width: 42px;
+  background: #fca311;
+  right: 30px;
+  bottom: 25px;
+  text-align: center;
+  line-height: 50px;
+  color: var(--secondary-text-color);
+  z-index: 999;
+  font-size: 30px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.scroll-up-btn i {
+  display: inline-block;
+  line-height: 1;
+  font-weight: 900;
 }
 
 /* header section */
@@ -540,8 +570,11 @@ form {
 }
 .contact-form .contact-btn {
   position: relative;
-  margin-left: 50%;
-  transform: translateX(-50%);
+  /* margin-left: 50%; */
+  /* margin-right: 0; */
+  float: right;
+
+  /* transform: translateX(-50%); */
   cursor: pointer;
   font-weight: bold;
   padding: 10px 30px;
@@ -555,8 +588,9 @@ form {
 /* footer-section */
 footer {
   padding: 80px var(--padding-inline-section) 40px;
-  background-color: var(--accent-color-dark);
+  /* background-color: var(--accent-color-dark); */
   margin-top: 100px;
+  background-color: #ffffff;
 }
 .footer-container {
   align-items: center;
@@ -595,6 +629,9 @@ footer {
 }
 .git {
   background-color: #333;
+}
+.linkedin {
+  background-color: #0077b5;
 }
 .fa-twitter {
   background-color: #26a7de;

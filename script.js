@@ -7,14 +7,9 @@ viewResume.addEventListener("click", function () {
 });
 
 //nav button
-
 document.querySelector(".nav-links").classList.toggle("nav-links-active");
 document.querySelector("#nav-toggle").addEventListener("click", () => {
   document.querySelector(".active").style.left = 0;
-
-  // document.querySelector(".nav-links").classList.toggle("nav-links-active");
-
-  // document.querySelector(".nav-links-active").style.display = "block";
 
   document
     .querySelector(".nav-links-active .secondary-button")
@@ -52,60 +47,31 @@ p_btns.addEventListener("click", (event) => {
 
     img_active.forEach((currEle) => currEle.classList.remove("hidden"));
   }
+});
 
+document.querySelector(".theme").addEventListener("click", (e) => {
+  document.body.classList.toggle("dark-mode-class");
+  document.querySelector("footer").style.backgroundColor = "#333";
+  // document.querySelector(".coding-card-item h5").style.color = "#14213d";
+  // document.querySelector(".coding-card-item a").style.color = "#14214d";
+
+  // if (e.target.className == document.querySelector(".light.theme")) {
+  //   console.log("sdfsf");
   // }
 });
 
-document.querySelector("#dark-mode").addEventListener("click", () => {
-  document.body.classList.toggle("dark-mode-class");
+//When user scrolls down 20px from the top of the document, show the btn
+
+window.onscroll = function () {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.querySelector(".show").style.display = "block";
+  } else {
+    document.querySelector(".show").style.display = "none";
+  }
+};
+
+document.querySelector(".scroll-up-btn").addEventListener("click", () => {
+  //scroll to the top element
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
 });
-
-// document.getElementById("dark-mode").addEventListener("click", () => {
-//   document.body.classList.toggle("dark-mode-class");
-// });
-
-// document.getElementById("dark-mode").addEventListener("click", () => {
-//   document.body.style.backgroundColor = "black";
-//   document.body.style.color = "white";
-
-//   document.querySelectorAll("p").forEach((element) => {
-//     element.style.color = "white";
-//   });
-//   document.querySelectorAll("a").forEach((element) => {
-//     element.style.color = "white";
-//   });
-//   document.querySelectorAll(".secondary-button").forEach((element) => {
-//     element.style.color = "white";
-//   });
-// });
-
-// document.getElementById("dark-mode").addEventListener("click", (e) => {
-//   if (icon.classList.contains("fa-sharp fa-solid fa-moon")) {
-//     icon.classList.remove("fa-sharp fa-solid fa-moon");
-//     icon.classList.add("fa-solid fa-brightness");
-//   } else {
-//     icon.classList.remove("fa-solid fa-brightness");
-//     icon.classList.add("fa-sharp fa-solid fa-moon");
-//   }
-// });
-
-//send email contact
-// const contact = document.querySelector(".contact-btn");
-// const name = document.querySelector("#name");
-// const email = document.querySelector("#email");
-// const msg = document.querySelector("#msg");
-
-// if (contact) {
-//   if (
-//     document.myForm.name.value != "" &&
-//     document.myForm.email.value != "" &&
-//     document.myForm.msg != ""
-//   ) {
-//     contact.addEventListener("click", function () {
-//       alert("Successfully form submited");
-//     });
-//   } else {
-//     alert("wrong");
-//   }
-// }
-//
