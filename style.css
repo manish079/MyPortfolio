@@ -17,11 +17,11 @@
   --white-color: #fff;
 }
 .dark-mode-class {
-  background-color: #222;
-  color: #ffffff;
-  --primary-text-color: #fff;
-  --secondary-text-color: #ccc;
-  --body-bg-color: #222;
+  background-color: rgb(10, 10, 10);
+  color: rgb(240, 240, 240);
+  --primary-text-color: rgb(240, 240, 240);
+  --secondary-text-color: rgb(215, 215, 215);
+  --body-bg-color: rgb(10, 10, 10);
 }
 
 /* CSS Reset */
@@ -29,6 +29,7 @@ body {
   font-family: "Poppins", "sans-serif";
   color: var(--primary-text-color);
   background-color: var(--body-bg-color);
+  scroll-behavior: smooth;
 }
 
 h1 {
@@ -102,6 +103,8 @@ ul {
   /* background-color: var(--accent-color-dark); */
   /* background-color: antiquewhite; */
   background: none;
+  transition: cubic-bezier(0.07, 1.41, 0.82, 1.41) 0.2s;
+  transform: scale(1.02);
 }
 .secondary-button {
   border: 0.5px solid var(--accent-color);
@@ -114,6 +117,8 @@ ul {
 }
 .secondary-button:hover {
   border-color: var(--primary-text-color);
+  transition: cubic-bezier(0.07, 1.41, 0.82, 1.41) 0.2s;
+  transform: scale(1.02);
 }
 
 /* ----------------------------- */
@@ -167,6 +172,7 @@ ul {
   opacity: 1;
   pointer-events: auto;
   bottom: 30px;
+  display: none;
 }
 .scroll-up-btn {
   position: fixed;
@@ -332,6 +338,8 @@ header {
 }
 .coding-card-item:hover {
   background-color: var(--accent-color-dark);
+  /* transition: cubic-bezier(0.07, 1.41, 0.82, 1.41) 0.2s;
+  transform: scale(1.02); */
 }
 
 h5 {
@@ -570,14 +578,12 @@ form {
 }
 .contact-form .contact-btn {
   position: relative;
-  /* margin-left: 50%; */
-  /* margin-right: 0; */
   float: right;
-
-  /* transform: translateX(-50%); */
   cursor: pointer;
   font-weight: bold;
   padding: 10px 30px;
+  margin-bottom: 2.3px;
+  margin-top: -20px;
 }
 
 #msg {
@@ -602,6 +608,7 @@ footer {
   align-items: center;
   gap: 30px;
   font-size: 1.5rem;
+  flex-wrap: wrap;
 }
 .icon {
   color: rgb(232, 230, 227);
@@ -669,7 +676,7 @@ footer {
 
 /* tablet */
 @media (max-width: 768px) {
-  .nav-toggle {
+  #nav-toggle {
     display: block;
   }
   .close-nav-toggle {
@@ -677,7 +684,7 @@ footer {
   }
 
   .nav-links-active {
-    /* display: none; */
+    display: block;
     align-items: center;
     flex-direction: column;
     width: 40%;

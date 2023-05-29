@@ -7,18 +7,18 @@ viewResume.addEventListener("click", function () {
 });
 
 //nav button
-document.querySelector(".nav-links").classList.toggle("nav-links-active");
-document.querySelector("#nav-toggle").addEventListener("click", () => {
-  document.querySelector(".active").style.left = 0;
+// document.querySelector(".nav-links").classList.toggle("nav-links-active");
+// document.querySelector("#nav-toggle").addEventListener("click", () => {
+//   document.querySelector(".active").style.left = 0;
 
-  document
-    .querySelector(".nav-links-active .secondary-button")
-    .classList.remove("secondary-button");
+//   document
+//     .querySelector(".nav-links-active .secondary-button")
+//     .classList.remove("secondary-button");
 
-  document
-    .querySelector(".nav-links-active .primary-button")
-    .classList.remove("primary-button");
-});
+//   document
+//     .querySelector(".nav-links-active .primary-button")
+//     .classList.remove("primary-button");
+// });
 
 // creating portfolio project tab component
 
@@ -50,22 +50,39 @@ p_btns.addEventListener("click", (event) => {
 });
 
 // =====================================================================================
-//Dark and Light Theme
-// document.querySelector(".theme").addEventListener("click", (e) => {
-//   document.body.classList.toggle("dark-mode-class");
-//   document.querySelector("footer").style.backgroundColor = "#333";
-//   // document.querySelector(".coding-card-item h5").style.color = "#14213d";
-//   // document.querySelector(".coding-card-item a").style.color = "#14214d";
+// Dark and Light Theme
 
-//   // if (e.target.className == document.querySelector(".light.theme")) {
-//   //   console.log("sdfsf");
-//   // }
-// });
+document.querySelector(".light-theme").addEventListener("click", () => {
+  // console.log("Click");
+
+  const lightTheme = document.querySelector(".light-theme");
+  const darkTheme = document.querySelector(".dark-theme");
+
+  document.body.classList.toggle("dark-mode-class");
+  document.querySelector("footer").style.backgroundColor = "#101010";
+  document.querySelector(".coding-card-item h5").style.color = "#14213d";
+  document.querySelector(".coding-card-item a").style.color = "#14214d";
+
+  // Toggle visibility of light-theme and dark-theme icons
+  lightTheme.style.display = "none";
+  darkTheme.style.display = "block";
+});
+document.querySelector(".dark-theme").addEventListener("click", () => {
+  const lightTheme = document.querySelector(".light-theme");
+  const darkTheme = document.querySelector(".dark-theme");
+
+  document.body.classList.toggle("dark-mode-class");
+  document.querySelector("footer").style.backgroundColor = ""; // Restore default value
+  document.querySelector(".coding-card-item h5").style.color = ""; // Restore default value
+  document.querySelector(".coding-card-item a").style.color = ""; // Restore default value
+
+  // Toggle visibility of light-theme and dark-theme icons
+  lightTheme.style.display = "block";
+  darkTheme.style.display = "none";
+});
 
 // =====================================================================================
 //Scroll page bottom to top when click on scroll-up-btn
-
-document.querySelector(".scroll-up-btn").style.display = "none";
 
 //When user scrolls down 20px from the top of the document, show the btn
 
@@ -88,8 +105,12 @@ document.querySelector(".scroll-up-btn").onclick = function () {
 };
 
 function scrollToTop() {
-  // document.body.scrollTop = 0;
-  // document.documentElement.scrollTop = 0;
+  //Without transition it goes to top
+
+  /*  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0; */
+
+  //With transition
   var scrollToTopButton = document.querySelector(".scroll-up-btn");
   var scrollStep = -window.scrollY / (500 / 15); // Adjust the scroll speed here
 
