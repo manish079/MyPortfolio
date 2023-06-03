@@ -111,7 +111,7 @@ navLinks.forEach((link) => {
 
 // Navigation-bar
 
-document.querySelector(".nav-links-active").classList.remove("active");
+// document.querySelector(".nav-links-active").classList.remove("active");
 
 document.querySelector("#nav-toggle").addEventListener("click", () => {
   // document.querySelector(".nav-links-active").style.left = "0";

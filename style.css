@@ -167,9 +167,6 @@ ul {
   height: 45px;
   cursor: pointer;
 }
-.nav-links .active {
-  left: 0;
-}
 
 /* btn-up */
 .show {
@@ -680,8 +677,13 @@ footer {
   #nav-toggle {
     display: block;
   }
+  .nav-links .active {
+    left: -100%;
+  }
   .nav-links-active {
+    background-color: #14213d;
     display: block;
+    left: 0;
     flex-direction: column;
     width: 60%;
     min-width: 40%;
@@ -691,8 +693,6 @@ footer {
     padding-inline: 2rem;
     top: 0;
     transition: all 1s;
-    left: -100%;
-    background-color: #14213d;
     color: var(--accent-color);
     font-size: 1.2rem;
   }
