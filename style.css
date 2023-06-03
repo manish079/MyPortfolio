@@ -167,6 +167,9 @@ ul {
   height: 45px;
   cursor: pointer;
 }
+.nav-links .active {
+  left: 0;
+}
 
 /* btn-up */
 .show {
@@ -673,14 +676,16 @@ footer {
   html {
     font-size: 16px;
   }
+
   #nav-toggle {
     display: block;
   }
   .nav-links-active {
     display: block;
-    align-items: center;
     flex-direction: column;
-    width: 40%;
+    width: 60%;
+    min-width: 40%;
+    height: 100vh;
     position: absolute;
     padding-block: 3rem;
     padding-inline: 2rem;
@@ -690,6 +695,24 @@ footer {
     background-color: #14213d;
     color: var(--accent-color);
     font-size: 1.2rem;
+  }
+
+  .nav-links-active .secondary-button {
+    color: white !important;
+    margin-bottom: 10px;
+    padding: 10px 20px 10px 10px;
+  }
+  .nav-links-active .primary-button {
+    margin-bottom: 15px;
+  }
+  #light-mode {
+    fill: white;
+  }
+
+  .nav-links-active li a {
+    margin: 5px 0;
+    padding: 10px;
+    cursor: pointer;
   }
   .close-nav-toggle a i {
     color: white;
@@ -880,8 +903,10 @@ footer {
     margin-top: 15px;
   }
   .nav-links-active {
-    width: 80%;
+    width: 60%;
+    min-width: 40%;
   }
+
   .header-left .name-anim {
     display: block;
   }

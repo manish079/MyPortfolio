@@ -108,3 +108,14 @@ navLinks.forEach((link) => {
     });
   });
 });
+
+// Navigation-bar
+document.querySelector("#nav-toggle").addEventListener("click", () => {
+  // document.querySelector(".nav-links-active").style.left = "0";
+  document.querySelector(".nav-links-active").classList.toggle("active");
+});
+
+// close - nav;
+document.querySelector(".close-nav-toggle").addEventListener("click", () => {
+  document.querySelector(".nav-links-active").classList.toggle("active");
+});
