@@ -15,6 +15,7 @@
   --nav-text-size: 1.5rem;
   --body-bg-color: #e5e5e5;
   --white-color: #fff;
+  --mobile-app-project-card-bg: black;
 }
 .dark-mode-class {
   background-color: rgb(10, 10, 10);
@@ -22,6 +23,7 @@
   --primary-text-color: rgb(240, 240, 240);
   --secondary-text-color: rgb(215, 215, 215);
   --body-bg-color: rgb(10, 10, 10);
+  --mobile-app-project-card-bg: #202020;
 }
 
 /* CSS Reset */
@@ -414,16 +416,19 @@ header {
   left: 0;
   overflow: hidden;
   border-radius: 10px;
+  box-shadow: 0 0 5px 2px rgb(0, 0, 0, 0.3);
 }
+/* .img-overlay-shadow-dark-mode {
+  box-shadow: 0 0 5px 2px rgb(221, 16, 16);
+} */
 .project-section img {
   width: 100%;
   height: 100%;
   display: inline-block;
-  border-radius: 7px;
+  border-radius: 10px;
 }
 .img-overlay:hover {
   transition: all 0.5s ease 0s;
-  /* box-shadow: 0 0 2px 2px var(--accent-color-dark); */
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 1);
 }
 
@@ -448,18 +453,27 @@ header {
   justify-content: center;
   margin-top: 1rem;
   gap: 20px;
+  /* flex-direction: column; */
+}
+.overlay .p-view .common-heading {
+  padding: 8px 20px;
+  font-size: 1rem;
+  color: #e31b6d !important;
+  background: none;
+}
+.overlay .p-view .common-heading :hover {
 }
 
 .overlay :nth-child(1) {
   color: white;
   font-weight: 600;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 
 .overlay :nth-child(2) {
   color: #e31b6d;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.5rem;
 }
 
@@ -473,13 +487,14 @@ header {
 }
 .overlay a {
   transition: 0.4s;
-  border-radius: 50px;
+  border-radius: 10px;
   z-index: 2;
 }
 
 .p-btn--5 img {
   object-fit: contain;
-  background-color: black;
+  /* background-color: black; */
+  background-color: var(--mobile-app-project-card-bg);
 }
 
 /* skills section */
@@ -768,8 +783,8 @@ footer {
     flex-wrap: wrap;
   }
   .coding-profile {
-    padding-inline: 0;
     margin-block: 10px;
+    padding-inline: 5px;
   }
   .coding-profile h4 {
     margin-bottom: 10px;
@@ -913,11 +928,12 @@ footer {
   .about-top {
     padding: 0;
   }
-  .coding-profile {
-    padding-inline: 0;
-  }
+
   .project-section .grid-three-column {
     grid-template-columns: repeat(1, 1fr);
+  }
+  .project-container {
+    margin-inline: 5px;
   }
 
   .project-section .container .p-btns .btn {
