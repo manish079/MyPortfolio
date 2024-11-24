@@ -554,7 +554,9 @@ form {
     transform: translateY(0);
   }
 }
-
+.contact-form {
+  width: 100%
+}
 .contact-form input,
 .contact-form textarea {
   width: 100%;
